@@ -48,6 +48,7 @@ ul.inline
   list-style: none
   li
     display: inline-block
+    vertical-align: top
 
 form
   background-color: #ffda45
@@ -62,6 +63,16 @@ form
     font-size: 14px
     text-align: center
     margin-bottom: 0
+  &.invert
+    background-color: white
+    border: 1px solid #dbb312
+    color: black
+    padding: 10px 40px
+  label
+    display: block
+    margin: 15px 0 10px
+    font:
+      weight: bold
 
 input[type="text"], input[type="email"]
   display: block
@@ -78,6 +89,16 @@ input[type="text"], input[type="email"]
   -moz-box-shadow: none
   box-shadow: none
 
+input[type="radio"]
+  margin: 5px 5px 5px 0
+
+textarea
+  display: block
+  width: 100%
+  border: 1px solid #dbb312
+  border-radius: 3px
+  height: 100px
+  margin: 10px 0
 
 .hero
   background: #1f4d70
@@ -130,7 +151,6 @@ input[type="text"], input[type="email"]
   ul.inline
     li
       width: 49%
-      vertical-align: top
       &.first
         padding-top: 40px
         padding-right: 60px
@@ -195,3 +215,88 @@ input[type="text"], input[type="email"]
 
 .bottom-section
   padding: 20px 60px 60px 60px
+
+.next-step
+  h1
+    font-size: 36px
+    text-align: center
+    line-height: 50px
+    margin-bottom: 0
+  p
+    text-align: center
+    font-size: 16px
+    color: #808080
+
+.caption
+  position: relative
+  top: 170px
+  left: -50px
+  font:
+    style: italic
+    size: 12px
+  span
+    font:
+      size: 14px
+      weight: bold
+      style: normal
+    color: black
+    display: block
+
+ol.progtrckr
+  margin: 40px auto 60px
+  padding: 0
+  list-style: none
+  text-align: center
+  counter-reset: my-badass-counter
+  li
+    display: inline-block
+    text-align: center
+    line-height: 3em
+    width: 33%
+    &:after
+      content: "\00a0\00a0"
+    &:before
+      position: relative
+      bottom: -2.5em
+      float: left
+      left: 50%
+      line-height: 1em
+    &.progtrckr-done
+      color: #1F4D70
+      font-size: 18px
+      border-bottom: 4px solid #D2990F
+    &.progtrckr-done:before
+      content: counter(my-badass-counter)
+      counter-increment: my-badass-counter
+      color: #1F4D70
+      background-color: #D2990F
+      height: 1.4em
+      width: 1.4em
+      line-height: 1.2em
+      border: none
+      border-radius: 1.4em
+      font:
+        size: 40px
+        family: Georgia, Times, "Times New Roman", serif
+        weight: normal
+      bottom: -0.7em
+    &.progtrckr-todo
+      color: #818185
+      border-bottom: 4px solid #818185
+      color: #1F4D70
+      font-size: 18px
+    &.progtrckr-todo:before
+      content: counter(my-badass-counter)
+      counter-increment: my-badass-counter
+      color: white
+      background-color: #818185
+      height: 1.4em
+      width: 1.4em
+      line-height: 1.2em
+      border: none
+      border-radius: 1.4em
+      font:
+        size: 40px
+        family: Georgia, Times, "Times New Roman", serif
+        weight: normal
+      bottom: -0.7em

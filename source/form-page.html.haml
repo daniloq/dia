@@ -1,14 +1,43 @@
 = partial "header"
 
 %section.next-step
-  %article
+  %article.wrapper
     %h1
       Pre-Qualify for Social Security Disability Today!
       %br
       Get your Free, no-obligation evaluation now
     %p All free evaluations are performed by an educational social security disability advocate or attorney.
+    %ol.progtrckr{"data-progtrckr-steps" => "3"}
+      %li.progtrckr-done Applicant Info
+      /
+      %li.progtrckr-done Qualify
+      /
+      %li.progtrckr-todo Finished!
+    %ul.inline
+      %li
+        .caption
+          %span Barbara, 52
+          Carpal Tunnel Syndrome
+        %img{src: "images/woman.png"}
+      %li
+        %form.invert
+          %label Do you already receive some Social Security benefits?
+          %input{name: "benefits", type: "radio", value: "yes"} Yes
+          %br
+          %input{name: "benefits", type: "radio", value: "no"} No
+          %label Do you expect to be out of work for at least 12 months?
+          %input{name: "work", type: "radio", value: "yes"} Yes
+          %br
+          %input{name: "work", type: "radio", value: "no"} No
+          %label Do you have a social security attorney or advocate?
+          %input{name: "advocate", type: "radio", value: "yes"} Yes
+          %br
+          %input{name: "advocate", type: "radio", value: "no"} No
+          %textarea{placeholder: "Please describe your medical condition."}
+          %input.submit-btn{type: "submit", value: "Get My Free Evaluation"}
     .divider
       %span Your privacy comes first
     %img{src: "images/security-logos.png"}
+
 
 = partial "footer"
