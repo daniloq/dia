@@ -96,6 +96,8 @@ textarea
   display: block
   width: 100%
   border: 1px solid #dbb312
+  padding: 12px 0 12px 10px
+  box-sizing: border-box
   border-radius: 3px
   height: 100px
   margin: 10px 0
@@ -226,6 +228,10 @@ textarea
     text-align: center
     font-size: 16px
     color: #808080
+  ul.inline
+    li
+      width: 49%
+      vertical-align: bottom
 
 .caption
   position: relative
@@ -262,41 +268,31 @@ ol.progtrckr
       left: 50%
       line-height: 1em
     &.progtrckr-done
-      color: #1F4D70
-      font-size: 18px
+      color: black
       border-bottom: 4px solid #D2990F
     &.progtrckr-done:before
       content: counter(my-badass-counter)
       counter-increment: my-badass-counter
       color: #1F4D70
       background-color: #D2990F
-      height: 1.4em
-      width: 1.4em
+      height: 1.2em
+      width: 1.2em
       line-height: 1.2em
       border: none
-      border-radius: 1.4em
-      font:
-        size: 40px
-        family: Georgia, Times, "Times New Roman", serif
-        weight: normal
-      bottom: -0.7em
+      border-radius: 1.2em
+      // font:
+      //   size: 40px
+      //   family: Georgia, Times, "Times New Roman", serif
+      //   weight: normal
     &.progtrckr-todo
-      color: #818185
-      border-bottom: 4px solid #818185
-      color: #1F4D70
-      font-size: 18px
+      color: silver
+      border-bottom: 4px solid silver
     &.progtrckr-todo:before
       content: counter(my-badass-counter)
       counter-increment: my-badass-counter
       color: white
-      background-color: #818185
-      height: 1.4em
-      width: 1.4em
-      line-height: 1.2em
-      border: none
-      border-radius: 1.4em
-      font:
-        size: 40px
-        family: Georgia, Times, "Times New Roman", serif
-        weight: normal
-      bottom: -0.7em
+      background-color: silver
+      height: 1.2em
+      width: 1.2em
+      bottom: -2.5em
+      border-radius: 1.2em
